@@ -1,100 +1,417 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>CEO Tech Solutions</title>
+<meta name="description"
+content="CEO Tech Solutions provides website development,
+digital design, and technology solutions for businesses.">
+
+<meta name="theme-color" content="#0b1f3a">
+
+<title>CEO Tech Solutions | Build Your Digital Future</title>
 
 <style>
-body {
-font-family: Arial, sans-serif;
-background-color: #f4f7fc;
-color: #222222;
-margin: 0;
-line-height: 1.6;
+* {
+box-sizing: border-box;
 }
+
+html {
+scroll-behavior: smooth;
+scroll-padding-top: 20px;
+}
+
+body {
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+background-color: #f5f7fb;
+color: #202938;
+line-height: 1.7;
+}
+
+a {
+transition: 0.2s ease;
+}
+
+.container {
+width: 90%;
+max-width: 1150px;
+margin: auto;
+}
+
+/* NAVIGATION */
 
 nav {
 background-color: #0b1f3a;
-padding: 20px 10px;
-text-align: center;
+padding: 18px 0;
 }
 
-nav h2 {
+.nav-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 20px;
+flex-wrap: wrap;
+}
+
+.logo {
 color: white;
-margin-top: 0;
+font-size: 23px;
+font-weight: bold;
+text-decoration: none;
 }
 
-nav a {
+.nav-links {
+display: flex;
+flex-wrap: wrap;
+gap: 18px;
+}
+
+.nav-links a {
 color: white;
 text-decoration: none;
-display: inline-block;
-margin: 6px;
+font-size: 14px;
+font-weight: bold;
 }
 
-nav a:hover {
+.nav-links a:hover {
 color: #60a5fa;
 }
 
-section {
-padding: 40px 20px;
-text-align: center;
-}
-
-#home {
-background-color: #0b1f3a;
-color: white;
-padding: 70px 20px;
-}
-
-h1 {
-font-size: 36px;
-}
-
-h2 {
-color: #1473e6;
-}
-
-#home h1 {
-color: white;
-}
+/* BUTTONS */
 
 .button {
 display: inline-block;
+padding: 13px 23px;
+border-radius: 7px;
 background-color: #1473e6;
 color: white;
-padding: 12px 24px;
-border: none;
-border-radius: 6px;
 text-decoration: none;
+font-weight: bold;
+border: none;
 cursor: pointer;
-font-size: 16px;
-margin-top: 12px;
+margin: 7px 5px 7px 0;
 }
 
 .button:hover {
 background-color: #0958b8;
+transform: translateY(-2px);
 }
+
+.button-light {
+background-color: white;
+color: #0b1f3a;
+}
+
+.button-light:hover {
+background-color: #e7efff;
+}
+
+.button-whatsapp {
+background-color: #168b53;
+}
+
+.button-whatsapp:hover {
+background-color: #106b3f;
+}
+
+/* HERO / HOME */
+
+#home {
+background: linear-gradient(135deg, #0b1f3a, #164e8a);
+color: white;
+padding: 100px 0;
+}
+
+.hero-content {
+max-width: 780px;
+text-align: center;
+margin: auto;
+}
+
+.eyebrow {
+color: #93c5fd;
+font-weight: bold;
+letter-spacing: 2px;
+text-transform: uppercase;
+font-size: 13px;
+}
+
+#home h1 {
+font-size: 48px;
+line-height: 1.2;
+margin: 20px 0;
+}
+
+#home p {
+font-size: 18px;
+color: #e5edf8;
+max-width: 650px;
+margin: 15px auto;
+}
+
+/* GENERAL SECTIONS */
+
+section {
+padding: 75px 0;
+}
+
+.section-heading {
+text-align: center;
+max-width: 720px;
+margin: 0 auto 38px;
+}
+
+.section-heading h2 {
+color: #1473e6;
+font-size: 34px;
+line-height: 1.3;
+margin-bottom: 12px;
+}
+
+.section-heading p {
+color: #586579;
+}
+
+/* ABOUT */
+
+#about {
+background-color: white;
+}
+
+.about-content {
+max-width: 850px;
+margin: auto;
+text-align: center;
+}
+
+.about-content p {
+color: #4b5563;
+}
+
+/* SERVICES */
+
+.service-container {
+display: grid;
+grid-template-columns: repeat(3, minmax(0, 1fr));
+gap: 25px;
+}
+
+.service-card {
+background-color: white;
+padding: 30px 25px;
+border-radius: 13px;
+box-shadow: 0 5px 20px rgba(11, 31, 58, 0.07);
+border: 1px solid #e8edf5;
+transition: transform 0.2s;
+}
+
+.service-card:hover {
+transform: translateY(-5px);
+}
+
+.service-number {
+display: inline-block;
+background-color: #e5efff;
+color: #1473e6;
+padding: 8px 13px;
+border-radius: 8px;
+font-weight: bold;
+}
+
+.service-card h3 {
+color: #0b1f3a;
+font-size: 21px;
+margin-top: 18px;
+}
+
+.service-card p {
+color: #586579;
+}
+
+/* PORTFOLIO */
+
+#portfolio {
+background-color: white;
+}
+
+.portfolio-grid {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 25px;
+}
+
+.portfolio-card {
+background-color: #f5f7fb;
+border-radius: 13px;
+padding: 30px;
+border: 1px solid #e2e8f0;
+}
+
+.portfolio-label {
+display: inline-block;
+color: #1473e6;
+background-color: #e5efff;
+padding: 5px 11px;
+border-radius: 20px;
+font-size: 12px;
+font-weight: bold;
+}
+
+.portfolio-card h3 {
+color: #0b1f3a;
+margin-bottom: 8px;
+}
+
+.portfolio-card p {
+color: #586579;
+}
+
+/* HOW IT WORKS */
+
+.process-grid {
+display: grid;
+grid-template-columns: repeat(3, minmax(0, 1fr));
+gap: 25px;
+}
+
+.process-card {
+text-align: center;
+padding: 25px;
+background-color: white;
+border-radius: 12px;
+border: 1px solid #e8edf5;
+}
+
+.process-card h3 {
+color: #1473e6;
+}
+
+.process-card p {
+color: #586579;
+}
+
+/* CONTACT */
+
+#contact {
+background-color: #e8f1fc;
+}
+
+.contact-box {
+max-width: 800px;
+margin: auto;
+text-align: center;
+background-color: white;
+padding: 40px 25px;
+border-radius: 15px;
+box-shadow: 0 5px 20px rgba(11, 31, 58, 0.06);
+}
+
+.contact-box p {
+color: #586579;
+}
+
+.contact-details {
+margin: 25px 0;
+}
+
+.contact-details a {
+display: block;
+color: #1473e6;
+text-decoration: none;
+font-weight: bold;
+margin: 12px 0;
+overflow-wrap: anywhere;
+}
+
+/* FOOTER */
 
 footer {
 background-color: #0b1f3a;
 color: white;
+padding: 30px 15px;
 text-align: center;
-padding: 20px;
+}
+
+footer p {
+margin: 6px 0;
+}
+
+footer a {
+color: #93c5fd;
+text-decoration: none;
+}
+
+.footer-small {
+color: #cbd5e1;
+font-size: 13px;
+margin-top: 15px;
+}
+
+/* TABLET AND PHONE */
+
+@media (max-width: 800px) {
+.service-container,
+.process-grid {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+#home h1 {
+font-size: 40px;
+}
 }
 
 @media (max-width: 600px) {
-h1 {
-font-size: 28px;
+.nav-container {
+justify-content: center;
+text-align: center;
 }
 
-section {
-padding: 30px 15px;
+.nav-links {
+justify-content: center;
+gap: 12px;
+}
+
+.logo {
+font-size: 21px;
 }
 
 #home {
-padding: 50px 15px;
+padding: 70px 0;
+}
+
+#home h1 {
+font-size: 34px;
+}
+
+#home p {
+font-size: 16px;
+}
+
+section {
+padding: 55px 0;
+}
+
+.section-heading h2 {
+font-size: 28px;
+}
+
+.service-container,
+.portfolio-grid,
+.process-grid {
+grid-template-columns: 1fr;
+}
+
+.service-card,
+.portfolio-card,
+.process-card {
+padding: 25px 20px;
+}
+
+.contact-box {
+padding: 30px 18px;
 }
 }
 </style>
@@ -102,58 +419,340 @@ padding: 50px 15px;
 
 <body>
 
+<!-- NAVIGATION -->
+
 <nav>
-<h2>CEO Tech Solutions</h2>
+<div class="container nav-container">
+
+<a class="logo" href="#home">
+CEO Tech Solutions
+</a>
+
+<div class="nav-links">
 <a href="#home">Home</a>
 <a href="#about">About</a>
 <a href="#services">Services</a>
+<a href="#portfolio">Portfolio</a>
 <a href="#contact">Contact</a>
+</div>
+
+</div>
 </nav>
 
+<!-- HOME -->
+
 <section id="home">
-<h1>Welcome to CEO Tech Solutions</h1>
-<p>We build digital solutions for a better future.</p>
-<p>Helping businesses grow through technology and innovation.</p>
-<a class="button" href="#contact">Get Started</a>
+<div class="container hero-content">
+
+<span class="eyebrow">
+Technology • Creativity • Innovation
+</span>
+
+<h1>
+Build Your Digital Future With CEO Tech Solutions
+</h1>
+
+<p>
+We help businesses and individuals establish
+their online presence through modern websites,
+creative digital design, and technology solutions.
+</p>
+
+<a class="button button-light" href="#services">
+Explore Our Services
+</a>
+
+<a class="button button-whatsapp"
+href="https://wa.me/233206765363?text=Hello%20CEO%20Tech%20Solutions%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+target="_blank"
+rel="noopener noreferrer">
+Chat With Us on WhatsApp
+</a>
+
+</div>
 </section>
+
+<!-- ABOUT -->
 
 <section id="about">
-<h2>About Us</h2>
-<p>Welcome to CEO Tech Solutions!</p>
+<div class="container">
+
+<div class="section-heading">
+<h2>About CEO Tech Solutions</h2>
 <p>
-We are a growing technology business focused on helping
-people and businesses succeed through technology.
+Your ideas deserve a strong digital presence.
 </p>
+</div>
+
+<div class="about-content">
+
 <p>
-Our goal is to create useful, modern, and reliable
-digital solutions.
+CEO Tech Solutions is a growing technology
+business focused on helping people and
+businesses make better use of technology.
 </p>
+
+<p>
+We aim to create modern, useful, and
+accessible digital experiences that help
+businesses present their services online.
+</p>
+
+<p>
+Our vision is to grow into a trusted technology
+company known for creativity, learning,
+reliability, and customer satisfaction.
+</p>
+
+<a class="button" href="#contact">
+Let's Discuss Your Project
+</a>
+
+</div>
+</div>
 </section>
+
+<!-- SERVICES -->
 
 <section id="services">
+<div class="container">
+
+<div class="section-heading">
 <h2>Our Services</h2>
+<p>
+Digital services designed to help your
+ideas move forward.
+</p>
+</div>
+
+<div class="service-container">
+
+<div class="service-card">
+<span class="service-number">01</span>
 
 <h3>Website Development</h3>
-<p>We build modern websites for businesses and individuals.</p>
+
+<p>
+Modern, mobile-friendly websites for
+businesses, entrepreneurs, and individuals.
+</p>
+
+<a class="button"
+href="mailto:mmclyriczbadc@gmail.com?subject=Website%20Development%20Enquiry">
+Ask About Websites
+</a>
+</div>
+
+<div class="service-card">
+<span class="service-number">02</span>
 
 <h3>Digital Design</h3>
-<p>We help businesses create attractive digital designs.</p>
+
+<p>
+Creative digital designs to help businesses
+communicate their ideas and present their
+brands online.
+</p>
+
+<a class="button"
+href="mailto:mmclyriczbadc@gmail.com?subject=Digital%20Design%20Enquiry">
+Ask About Design
+</a>
+</div>
+
+<div class="service-card">
+<span class="service-number">03</span>
 
 <h3>Technology Solutions</h3>
-<p>We help people and businesses make better use of technology.</p>
+
+<p>
+Practical technology guidance and digital
+solutions to help individuals and businesses
+work more efficiently.
+</p>
+
+<a class="button"
+href="mailto:mmclyriczbadc@gmail.com?subject=Technology%20Solutions%20Enquiry">
+Discuss Your Needs
+</a>
+</div>
+
+</div>
+</div>
 </section>
+
+<!-- PORTFOLIO -->
+
+<section id="portfolio">
+<div class="container">
+
+<div class="section-heading">
+<h2>Our Portfolio</h2>
+<p>
+Explore the kinds of digital projects
+CEO Tech Solutions aims to create.
+</p>
+</div>
+
+<div class="portfolio-grid">
+
+<div class="portfolio-card">
+<span class="portfolio-label">
+Sample Project Idea
+</span>
+
+<h3>Business Website</h3>
+
+<p>
+A professional website concept for a
+small business to showcase its services,
+contact information, and business details.
+</p>
+</div>
+
+<div class="portfolio-card">
+<span class="portfolio-label">
+Sample Project Idea
+</span>
+
+<h3>Restaurant Website</h3>
+
+<p>
+A website concept for a restaurant to
+present its menu, share its location,
+and help customers get in touch.
+</p>
+</div>
+
+</div>
+
+<p style="text-align:center; margin-top:25px; color:#586579;">
+These are sample project concepts, not completed
+client projects. This section can be updated as
+you build your portfolio.
+</p>
+
+</div>
+</section>
+
+<!-- HOW IT WORKS -->
+
+<section id="process">
+<div class="container">
+
+<div class="section-heading">
+<h2>How It Works</h2>
+<p>
+A simple process for getting started
+with your digital project.
+</p>
+</div>
+
+<div class="process-grid">
+
+<div class="process-card">
+<h3>1. Tell Us Your Idea</h3>
+
+<p>
+Explain what you want to build
+and what you hope to achieve.
+</p>
+</div>
+
+<div class="process-card">
+<h3>2. Discuss the Plan</h3>
+
+<p>
+We discuss your needs, the project scope,
+the expected cost, and the next steps.
+</p>
+</div>
+
+<div class="process-card">
+<h3>3. Begin the Project</h3>
+
+<p>
+Once the scope and terms are agreed,
+the project can move forward.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
 
 <section id="contact">
-<h2>Contact Us</h2>
-<p>Have a project in mind? We would love to hear from you.</p>
-<p>Let's discuss how technology can help your business.</p>
-<a class="button" href="mailto:your-email@example.com">Email Us</a>
+<div class="container">
+
+<div class="contact-box">
+
+<div class="section-heading">
+<h2>Let's Work Together</h2>
+
+<p>
+Have an idea for a website or digital
+project? Get in touch with CEO Tech Solutions.
+</p>
+</div>
+
+<a class="button button-whatsapp"
+href="https://wa.me/233206765363?text=Hello%20CEO%20Tech%20Solutions%2C%20I%20would%20like%20to%20discuss%20a%20project."
+target="_blank"
+rel="noopener noreferrer">
+Contact Us on WhatsApp
+</a>
+
+<a class="button"
+href="mailto:mmclyriczbadc@gmail.com?subject=Project%20Enquiry">
+Send Us an Email
+</a>
+
+<div class="contact-details">
+
+<a href="mailto:mmclyriczbadc@gmail.com">
+Email: mmclyriczbadc@gmail.com
+</a>
+
+<a href="https://wa.me/233206765363"
+target="_blank"
+rel="noopener noreferrer">
+WhatsApp: 020 676 5363
+</a>
+
+</div>
+
+<p>
+When contacting us, please describe your
+project and what you need help with.
+</p>
+
+</div>
+</div>
 </section>
 
+<!-- FOOTER -->
+
 <footer>
-<p>&copy; 2026 CEO Tech Solutions.</p>
-<p>Building digital solutions for a better future.</p>
+<div class="container">
+
+<p>
+<strong>CEO Tech Solutions</strong>
+</p>
+
+<p>
+Building digital solutions for a better future.
+</p>
+
+<p class="footer-small">
+&copy; 2026 CEO Tech Solutions.
+All rights reserved.
+</p>
+
+</div>
 </footer>
 
 </body>
-</html>
+  </html>
+  
