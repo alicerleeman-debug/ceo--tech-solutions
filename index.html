@@ -1,419 +1,492 @@
 
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="description"
-content="CEO Tech Solutions provides website development, digital design, and technology solutions for businesses.">
-
-<meta name="theme-color" content="#0b1f3a">
-
-<title>CEO Tech Solutions | Build Your Digital Future</title>
+<meta name="description" content="CEO Tech Solutions creates modern websites for businesses, restaurants, and entrepreneurs.">
+<title>CEO Tech Solutions | Websites for Your Business</title>
 
 <style>
 * {
+margin: 0;
+padding: 0;
 box-sizing: border-box;
-}
-
-html {
 scroll-behavior: smooth;
-scroll-padding-top: 20px;
 }
 
 body {
-margin: 0;
 font-family: Arial, Helvetica, sans-serif;
-background-color: #f5f7fb;
-color: #202938;
+background: #f8fafc;
+color: #172033;
 line-height: 1.7;
 }
 
 a {
-transition: 0.2s ease;
-}
-
-.container {
-width: 90%;
-max-width: 1150px;
-margin: auto;
-}
-
-/* NAVIGATION */
-
-nav {
-background-color: #0b1f3a;
-padding: 18px 0;
-}
-
-.nav-container {
-display: flex;
-justify-content: space-between;
-align-items: center;
-gap: 20px;
-flex-wrap: wrap;
-}
-
-.logo {
-color: white;
-font-size: 23px;
-font-weight: bold;
 text-decoration: none;
 }
 
-.nav-links {
+header {
+background: #0b1220;
+color: white;
+padding: 18px 7%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+gap: 15px;
+}
+
+.logo {
+color: #38bdf8;
+font-size: 23px;
+font-weight: bold;
+}
+
+nav {
 display: flex;
 flex-wrap: wrap;
 gap: 18px;
 }
 
-.nav-links a {
+nav a {
 color: white;
-text-decoration: none;
 font-size: 14px;
-font-weight: bold;
 }
 
-.nav-links a:hover {
-color: #60a5fa;
+nav a:hover {
+color: #38bdf8;
 }
 
-/* BUTTONS */
+.hero {
+background: linear-gradient(135deg, #0b1220, #123b68);
+color: white;
+text-align: center;
+padding: 100px 7%;
+}
+
+.hero h1 {
+font-size: clamp(34px, 6vw, 58px);
+line-height: 1.2;
+margin-bottom: 20px;
+}
+
+.hero h1 span {
+color: #38bdf8;
+}
+
+.hero p {
+max-width: 650px;
+margin: 0 auto 28px;
+color: #dbeafe;
+font-size: 17px;
+}
 
 .button {
 display: inline-block;
-padding: 13px 23px;
-border-radius: 7px;
-background-color: #1473e6;
+background: #0284c7;
 color: white;
-text-decoration: none;
+padding: 12px 23px;
+border-radius: 7px;
 font-weight: bold;
-border: none;
-cursor: pointer;
-margin: 7px 5px 7px 0;
+margin: 5px;
+transition: 0.3s;
 }
 
 .button:hover {
-background-color: #0958b8;
+background: #0369a1;
 transform: translateY(-2px);
 }
 
-.button-light {
-background-color: white;
-color: #0b1f3a;
+.button-outline {
+border: 1px solid #38bdf8;
+background: transparent;
 }
-
-.button-light:hover {
-background-color: #e7efff;
-}
-
-.button-whatsapp {
-background-color: #168b53;
-}
-
-.button-whatsapp:hover {
-background-color: #106b3f;
-}
-
-/* HERO / HOME */
-
-#home {
-background: linear-gradient(135deg, #0b1f3a, #164e8a);
-color: white;
-padding: 100px 0;
-}
-
-.hero-content {
-max-width: 780px;
-text-align: center;
-margin: auto;
-}
-
-.eyebrow {
-color: #93c5fd;
-font-weight: bold;
-letter-spacing: 2px;
-text-transform: uppercase;
-font-size: 13px;
-}
-
-#home h1 {
-font-size: 48px;
-line-height: 1.2;
-margin: 20px 0;
-}
-
-#home p {
-font-size: 18px;
-color: #e5edf8;
-max-width: 650px;
-margin: 15px auto;
-}
-
-/* GENERAL SECTIONS */
 
 section {
-padding: 75px 0;
+padding: 75px 7%;
+scroll-margin-top: 20px;
 }
 
-.section-heading {
+.section-title {
 text-align: center;
-max-width: 720px;
-margin: 0 auto 38px;
+margin-bottom: 40px;
 }
 
-.section-heading h2 {
-color: #1473e6;
-font-size: 34px;
-line-height: 1.3;
-margin-bottom: 12px;
+.section-title h2 {
+font-size: 32px;
+margin-bottom: 10px;
+color: #0b1220;
 }
 
-.section-heading p {
-color: #586579;
-}
-
-/* ABOUT */
-
-#about {
-background-color: white;
+.section-title p {
+color: #64748b;
 }
 
 .about-content {
 max-width: 850px;
 margin: auto;
 text-align: center;
+font-size: 17px;
 }
 
-.about-content p {
-color: #4b5563;
-}
-
-/* SERVICES */
-
-.service-container {
+.services-grid,
+.portfolio-grid,
+.process-grid {
 display: grid;
-grid-template-columns: repeat(3, minmax(0, 1fr));
-gap: 25px;
+grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+gap: 22px;
 }
 
-.service-card {
-background-color: white;
-padding: 30px 25px;
-border-radius: 13px;
-box-shadow: 0 5px 20px rgba(11, 31, 58, 0.07);
-border: 1px solid #e8edf5;
-transition: transform 0.2s;
+.card {
+background: white;
+padding: 28px;
+border-radius: 12px;
+border: 1px solid #e2e8f0;
+box-shadow: 0 5px 20px rgba(15, 23, 42, 0.05);
+transition: 0.3s;
 }
 
-.service-card:hover {
+.card:hover {
 transform: translateY(-5px);
+box-shadow: 0 12px 25px rgba(15, 23, 42, 0.09);
 }
 
-.service-number {
-display: inline-block;
-background-color: #e5efff;
-color: #1473e6;
-padding: 8px 13px;
-border-radius: 8px;
-font-weight: bold;
+.card .icon {
+font-size: 32px;
+margin-bottom: 12px;
 }
 
-.service-card h3 {
-color: #0b1f3a;
-font-size: 21px;
-margin-top: 18px;
+.card h3 {
+margin-bottom: 12px;
+color: #0f3158;
 }
 
-.service-card p {
-color: #586579;
-}
-
-/* PORTFOLIO */
-
-#portfolio {
-background-color: white;
-}
-
-.portfolio-grid {
-display: grid;
-grid-template-columns: repeat(2, minmax(0, 1fr));
-gap: 25px;
+.card p {
+color: #64748b;
+margin-bottom: 15px;
 }
 
 .portfolio-card {
-background-color: #f5f7fb;
-border-radius: 13px;
-padding: 30px;
-border: 1px solid #e2e8f0;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
 }
 
-.portfolio-label {
+.project-label {
 display: inline-block;
-color: #1473e6;
-background-color: #e5efff;
-padding: 5px 11px;
+background: #e0f2fe;
+color: #075985;
+padding: 5px 10px;
 border-radius: 20px;
 font-size: 12px;
 font-weight: bold;
+margin-bottom: 12px;
 }
 
-.portfolio-card h3 {
-color: #0b1f3a;
-margin-bottom: 8px;
+.portfolio-card .button {
+margin: auto 0 0;
 }
 
 .portfolio-card p {
-color: #586579;
+margin-bottom: 20px;
 }
 
-/* HOW IT WORKS */
-
-.process-grid {
-display: grid;
-grid-template-columns: repeat(3, minmax(0, 1fr));
-gap: 25px;
-}
-
-.process-card {
-text-align: center;
-padding: 25px;
-background-color: white;
-border-radius: 12px;
-border: 1px solid #e8edf5;
-}
-
-.process-card h3 {
-color: #1473e6;
-}
-
-.process-card p {
-color: #586579;
-}
-
-/* CONTACT */
-
-#contact {
-background-color: #e8f1fc;
-}
-
-.contact-box {
-max-width: 800px;
-margin: auto;
-text-align: center;
-background-color: white;
-padding: 40px 25px;
-border-radius: 15px;
-box-shadow: 0 5px 20px rgba(11, 31, 58, 0.06);
-}
-
-.contact-box p {
-color: #586579;
-}
-
-.contact-details {
-margin: 25px 0;
-}
-
-.contact-details a {
-display: block;
-color: #1473e6;
-text-decoration: none;
+.process-number {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+background: #0284c7;
+color: white;
+width: 42px;
+height: 42px;
+border-radius: 50%;
 font-weight: bold;
-margin: 12px 0;
-overflow-wrap: anywhere;
+margin-bottom: 15px;
 }
 
-/* FOOTER */
+.contact {
+background: #eaf4ff;
+text-align: center;
+}
+
+.contact-content {
+max-width: 650px;
+margin: auto;
+}
+
+.contact-content p {
+margin-bottom: 15px;
+}
 
 footer {
-background-color: #0b1f3a;
-color: white;
-padding: 30px 15px;
-text-align: center;
-}
-
-footer p {
-margin: 6px 0;
-}
-
-footer a {
-color: #93c5fd;
-text-decoration: none;
-}
-
-.footer-small {
+background: #0b1220;
 color: #cbd5e1;
-font-size: 13px;
-margin-top: 15px;
+text-align: center;
+padding: 25px 7%;
+font-size: 14px;
 }
 
-/* TABLET AND PHONE */
-
-@media (max-width: 800px) {
-.service-container,
-.process-grid {
-grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-#home h1 {
-font-size: 40px;
-}
+footer strong {
+color: #38bdf8;
 }
 
 @media (max-width: 600px) {
-.nav-container {
+header {
 justify-content: center;
 text-align: center;
 }
 
-.nav-links {
+nav {
 justify-content: center;
 gap: 12px;
 }
 
-.logo {
-font-size: 21px;
-}
-
-#home {
-padding: 70px 0;
-}
-
-#home h1 {
-font-size: 34px;
-}
-
-#home p {
-font-size: 16px;
+.hero {
+padding: 75px 6%;
 }
 
 section {
-padding: 55px 0;
+padding: 55px 6%;
 }
 
-.section-heading h2 {
-font-size: 28px;
-}
-
-.service-container,
-.portfolio-grid,
-.process-grid {
-grid-template-columns: 1fr;
-}
-
-.service-card,
-.portfolio-card,
-.process-card {
-padding: 25px 20px;
-}
-
-.contact-box {
-padding: 30px 18px;
+.section-title h2 {
+font-size: 27px;
 }
 }
 </style>
+</head>
+
+<body>
+
+<header>
+<a class="logo" href="#home">CEO Tech Solutions</a>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#process">Process</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+<h1>We Build Websites That Help Your Business <span>Grow.</span></h1>
+
+<p>
+Welcome to CEO Tech Solutions. We help businesses, restaurants,
+and entrepreneurs establish a professional online presence with
+modern, attractive, and mobile-friendly websites.
+</p>
+
+<a class="button" href="#portfolio">View Our Work</a>
+<a class="button button-outline" href="#contact">Contact Us</a>
+</section>
+
+<section id="about">
+<div class="section-title">
+<h2>About Us</h2>
+<p>Your business deserves a strong online presence.</p>
+</div>
+
+<div class="about-content">
+<p>
+<strong>CEO Tech Solutions</strong> is focused on helping businesses
+present themselves professionally online. We create clean,
+attractive websites designed to introduce your services, display
+your products, and make it easier for customers to contact you.
+</p>
+
+<br>
+
+<p>
+Whether you own a restaurant, run a small business, or are starting
+a new brand, we aim to provide a website that fits your goals.
+</p>
+</div>
+</section>
+
+<section id="services" style="background:#eef5fb;">
+<div class="section-title">
+<h2>Our Services</h2>
+<p>Digital solutions to help your business move forward.</p>
+</div>
+
+<div class="services-grid">
+
+<div class="card">
+<div class="icon">💻</div>
+<h3>Business Websites</h3>
+<p>
+Professional websites that introduce your business,
+showcase your services, and help customers find you online.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🍔</div>
+<h3>Restaurant Websites</h3>
+<p>
+Attractive restaurant websites featuring menus, food offerings,
+contact details, and convenient ordering links.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">📱</div>
+<h3>Mobile-Friendly Design</h3>
+<p>
+Websites designed to look good and work smoothly on mobile
+phones, tablets, and computers.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🚀</div>
+<h3>Website Launch</h3>
+<p>
+Help publishing your website online so customers can access
+your business from anywhere.
+</p>
+</div>
+
+</div>
+</section>
+
+<section id="portfolio">
+<div class="section-title">
+<h2>Our Portfolio</h2>
+<p>Explore our sample projects and business website designs.</p>
+</div>
+
+<div class="portfolio-grid">
+
+<div class="card portfolio-card">
+<span class="project-label">Business Website</span>
+<h3>Business Website Sample</h3>
+<p>
+A sample business website concept designed to introduce a brand,
+explain its services, and help potential customers get in touch.
+</p>
+<a class="button" href="#contact">Discuss a Website</a>
+</div>
+
+<div class="card portfolio-card">
+<span class="project-label">Restaurant Website</span>
+<h3>Restaurant Website Sample</h3>
+<p>
+A restaurant website concept showcasing food offerings and
+giving customers an easy way to learn about a restaurant.
+</p>
+<a
+class="button"
+href="https://alicerleeman-debug.github.io/restaurant--sample-website-/"
+target="_blank"
+rel="noopener noreferrer"
+>View Restaurant Sample</a>
+</div>
+
+<div class="card portfolio-card">
+<span class="project-label">Restaurant Project</span>
+<h3>Aunty Gladys Fast Food</h3>
+<p>
+Visit the Aunty Gladys Fast Food website to explore the restaurant
+project. This is an example of how a food business can present
+its offerings online and make it easier for customers to connect.
+</p>
+<a
+class="button"
+href="https://alicerleeman-debug.github.io/restaurant--sample-website-/"
+target="_blank"
+rel="noopener noreferrer"
+>Visit Restaurant Website</a>
+</div>
+
+</div>
+</section>
+
+<section id="process" style="background:#eef5fb;">
+<div class="section-title">
+<h2>How We Work</h2>
+<p>A simple process for bringing your website to life.</p>
+</div>
+
+<div class="process-grid">
+
+<div class="card">
+<div class="process-number">1</div>
+<h3>Tell Us Your Idea</h3>
+<p>
+Tell us about your business, what you need, and the goals
+you want your website to achieve.
+</p>
+</div>
+
+<div class="card">
+<div class="process-number">2</div>
+<h3>Plan and Design</h3>
+<p>
+We plan a suitable website layout and develop a design
+based on your business needs.
+</p>
+</div>
+
+<div class="card">
+<div class="process-number">3</div>
+<h3>Launch Your Website</h3>
+<p>
+After the website is ready and approved, we help make it
+available online.
+</p>
+</div>
+
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="section-title">
+<h2>Let's Work Together</h2>
+<p>Ready to give your business a professional online presence?</p>
+</div>
+
+<div class="contact-content">
+<p>
+Contact CEO Tech Solutions to discuss your website idea
+and the services you need.
+</p>
+
+<p><strong>Email:</strong> mmclyriczbadc@gmail.com</p>
+<p><strong>WhatsApp:</strong> +233 20 676 5363</p>
+
+<a
+class="button"
+href="https://wa.me/233206765363?text=Hello%20CEO%20Tech%20Solutions%2C%20I%20would%20like%20to%20ask%20about%20your%20website%20services."
+target="_blank"
+rel="noopener noreferrer"
+>Chat With Us on WhatsApp</a>
+
+<a
+class="button button-outline"
+href="mailto:mmclyriczbadc@gmail.com?subject=Website%20Enquiry"
+style="color:#075985;"
+>Send Us an Email</a>
+</div>
+</section>
+
+</main>
+
+<footer>
+<p>&copy; <span id="year"></span> <strong>CEO Tech Solutions</strong>. All rights reserved.</p>
+<p>Building your business online, one website at a time.</p>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
